@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "http://clinichr.runasp.net",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info"
+  }
+}
