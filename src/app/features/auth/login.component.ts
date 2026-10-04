@@ -16,17 +16,52 @@ import { ThemeService } from '../../core/ui/theme.service';
         <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
         <span class="grid-lines"></span>
         <div class="auth-brand-inner">
-          <span class="brand-mark lg"><i class="fa-solid fa-plus"></i></span>
-          <h1>إدارة الموارد البشرية بوضوح وسرعة</h1>
-          <p>الإجازات والحضور بالبصمة والرواتب — في منصة واحدة، بدون ورق وبدون جداول متفرقة.</p>
-          <ul class="auth-points">
-            <li><i class="fa-solid fa-circle-check"></i> طلبات إجازة مباشرة للـ HR</li>
-            <li><i class="fa-solid fa-circle-check"></i> متابعة التأخير مقابل سماحية 60 دقيقة</li>
-            <li><i class="fa-solid fa-circle-check"></i> رواتب تلقائية بخصومات الغياب والتأخير</li>
-          </ul>
+          <div class="auth-brand-header">
+            <span class="brand-mark lg"><i class="fa-solid fa-users-gear"></i></span>
+            <span class="auth-badge"><i class="fa-solid fa-sparkles"></i> المنظومة المتكاملة للموارد البشرية</span>
+          </div>
+          <h1>إدارة شؤون الموظفين والرواتب بذكاء وسرعة</h1>
+          <p>منصة سحابية متكاملة لمتابعة الحضور والانصراف، احتساب ساعات العمل وسماحية التأخير، وإصدار مسيرات الرواتب بدقة وسلاسة.</p>
+          <div class="auth-features">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-fingerprint"></i></div>
+              <div class="feature-text">
+                <strong>تسجيل الحضور والانصراف</strong>
+                <small>متابعة البصمة، التأخير، وساعات العمل اليومية</small>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-calendar-check"></i></div>
+              <div class="feature-text">
+                <strong>إدارة الإجازات والأرصدة</strong>
+                <small>دورة موافقات مرنة وحساب آلي للأرصدة المستحقة</small>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+              <div class="feature-text">
+                <strong>مسيرات الرواتب الدقيقة</strong>
+                <small>حساب تلقائي للبدلات والاستقطاعات والتأمينات</small>
+              </div>
+            </div>
+          </div>
+          <div class="auth-stats-bar">
+            <div class="stat-box">
+              <span class="stat-num">100%</span>
+              <span class="stat-lbl">أتمتة رقمية</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+              <span class="stat-num">24/7</span>
+              <span class="stat-lbl">وصول سحابي آمن</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+              <span class="stat-num">0</span>
+              <span class="stat-lbl">معاملات ورقية</span>
+            </div>
+          </div>
         </div>
-        <div class="glass-card g1"><small>سماحية التأخير</small><strong>42 / 60 دقيقة</strong></div>
-        <div class="glass-card g2"><small>صافي الراتب</small><strong>18,450.00 ج.م</strong></div>
       </section>
 
       <section class="auth-form-wrap">

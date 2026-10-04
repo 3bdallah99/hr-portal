@@ -599,24 +599,55 @@ hr { border-color: var(--border); opacity: 1; }
 /* ----- Auth --------------------------------------------------------------- */
 .auth-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); min-height: 100vh; }
 .auth-brand {
-  position: relative; overflow: hidden; display: flex; align-items: center; padding: 3.5rem; color: #fff;
-  background: radial-gradient(700px 400px at 15% 10%, rgba(99, 102, 241, 0.65), transparent 60%), radial-gradient(600px 400px at 90% 90%, rgba(37, 99, 235, 0.55), transparent 60%), #070b1c;
+  position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 3.5rem 3rem; color: #fff;
+  background: radial-gradient(800px 500px at 15% 15%, rgba(99, 102, 241, 0.45), transparent 65%), radial-gradient(700px 500px at 85% 85%, rgba(37, 99, 235, 0.35), transparent 65%), #090e24;
 }
-.blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.55; animation: float 14s ease-in-out infinite; }
-.blob.b1 { width: 320px; height: 320px; background: #6366f1; top: -80px; inset-inline-end: -60px; }
-.blob.b2 { width: 280px; height: 280px; background: #0ea5e9; bottom: -90px; inset-inline-start: -50px; animation-delay: -5s; }
-.blob.b3 { width: 200px; height: 200px; background: #a855f7; top: 45%; inset-inline-start: 40%; opacity: 0.3; animation-delay: -9s; }
-.grid-lines { position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px); background-size: 44px 44px; mask-image: radial-gradient(circle at 40% 40%, #000, transparent 75%); }
-.auth-brand-inner { position: relative; max-width: 480px; z-index: 1; }
-.auth-brand h1 { color: #fff; font-size: 2.3rem; line-height: 1.35; margin: 1.6rem 0 1rem; }
-.auth-brand p { color: #c7d2fe; font-size: 1.05rem; line-height: 1.85; }
-.auth-points { list-style: none; padding: 0; margin: 1.6rem 0 0; display: grid; gap: 0.75rem; color: #e0e7ff; }
-.auth-points i { color: #34d399; margin-inline-end: 0.55rem; }
-.glass-card { position: absolute; z-index: 1; padding: 0.9rem 1.15rem; border-radius: 16px; background: rgba(255, 255, 255, 0.09); border: 1px solid rgba(255, 255, 255, 0.18); backdrop-filter: blur(14px); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3); animation: float 9s ease-in-out infinite; }
-.glass-card small { display: block; color: #c7d2fe; font-size: 0.74rem; }
-.glass-card strong { font-size: 1.35rem; font-variant-numeric: tabular-nums; }
-.glass-card.g1 { bottom: 12%; inset-inline-end: 8%; }
-.glass-card.g2 { top: 10%; inset-inline-end: 14%; animation-delay: -4s; }
+.blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: 0.35; animation: float 14s ease-in-out infinite; pointer-events: none; }
+.blob.b1 { width: 340px; height: 340px; background: #4f46e5; top: -70px; inset-inline-end: -60px; }
+.blob.b2 { width: 300px; height: 300px; background: #0284c7; bottom: -80px; inset-inline-start: -60px; animation-delay: -5s; }
+.blob.b3 { width: 220px; height: 220px; background: #7c3aed; top: 40%; inset-inline-start: 45%; opacity: 0.2; animation-delay: -9s; }
+.grid-lines { position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px); background-size: 38px 38px; mask-image: radial-gradient(circle at 50% 50%, #000, transparent 80%); pointer-events: none; }
+.auth-brand-inner { position: relative; max-width: 520px; z-index: 1; width: 100%; }
+.auth-brand-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.auth-badge {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.4rem 0.95rem; border-radius: 99px;
+  background: rgba(99, 102, 241, 0.16); border: 1px solid rgba(165, 180, 252, 0.22);
+  color: #c7d2fe; font-size: 0.84rem; font-weight: 550;
+}
+.auth-badge i { color: #a5b4fc; }
+.auth-brand h1 { color: #fff; font-size: 2.1rem; line-height: 1.35; margin: 0 0 0.85rem; font-weight: 700; letter-spacing: -0.01em; }
+.auth-brand p { color: #94a3b8; font-size: 0.98rem; line-height: 1.75; margin-bottom: 1.8rem; }
+.auth-features { display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2rem; }
+.feature-item {
+  display: flex; align-items: center; gap: 0.95rem;
+  padding: 0.85rem 1.1rem; border-radius: 14px;
+  background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px); transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+.feature-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(99, 102, 241, 0.35);
+  transform: translateX(-4px);
+}
+.feature-icon {
+  width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0;
+  display: grid; place-items: center; font-size: 1.15rem;
+  background: rgba(99, 102, 241, 0.16); color: #818cf8;
+  border: 1px solid rgba(129, 140, 248, 0.25);
+}
+.feature-text strong { display: block; color: #f8fafc; font-size: 0.93rem; font-weight: 600; margin-bottom: 2px; }
+.feature-text small { color: #94a3b8; font-size: 0.8rem; line-height: 1.4; display: block; }
+.auth-stats-bar {
+  display: flex; align-items: center; justify-content: space-around;
+  padding: 1rem 1.25rem; border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.stat-box { text-align: center; }
+.stat-num { display: block; font-size: 1.35rem; font-weight: 750; color: #fff; }
+.stat-lbl { display: block; font-size: 0.74rem; color: #94a3b8; margin-top: 3px; }
+.stat-divider { width: 1px; height: 28px; background: rgba(255, 255, 255, 0.1); }
+
 .auth-form-wrap { position: relative; display: grid; place-items: center; padding: 2rem; background: var(--bg-glow), var(--bg); }
 .auth-form { width: 100%; max-width: 430px; padding: 2.3rem; border-radius: 24px; background: color-mix(in srgb, var(--card) 82%, transparent); backdrop-filter: blur(16px); border: 1px solid var(--border); box-shadow: var(--shadow-lg); animation: rise 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 .auth-form h2 { font-size: 1.7rem; margin-bottom: 0.4rem; }
